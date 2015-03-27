@@ -23,7 +23,7 @@ Graph.prototype.contains = function(node){
 Graph.prototype.removeNode = function(node){
   for(var i = 0; i < this.data.length; i++) {
     if(this.data[i].value === node) {
-      this.data.splice(i,i+1);
+      this.data.splice(i,1);
     }
   }
 };
@@ -62,7 +62,7 @@ Graph.prototype.removeEdge = function(fromNode, toNode){
     if(this.data[i].value === fromNode) {
       for(var j = 0; j < this.data[i].edges.length; j++) {
         if(this.data[i].edges[j] === toNode) {
-          this.data[i].edges.splice(j, j+1);
+          this.data[i].edges.splice(j, 1);
           firstEdge = true;
         }
       }
@@ -70,7 +70,7 @@ Graph.prototype.removeEdge = function(fromNode, toNode){
     if(this.data[i].value === toNode) {
       for(var k = 0; k < this.data[i].edges.length; k++) {
         if(this.data[i].edges[k] === fromNode) {
-          this.data[i].edges.splice(k, k+1);
+          this.data[i].edges.splice(k, 1);
           secondEdge = true;
         }
       }
