@@ -12,6 +12,7 @@ var LinkedList = function(){
       this.tail = node;
     } else {
       this.tail.next = node;
+      node.
       this.tail = node;
     }
     //set list.tail = new node
@@ -52,6 +53,7 @@ var Node = function(value){
 
   node.value = value;
   node.next = null;
+  node.prev = null;
 
   return node;
 };

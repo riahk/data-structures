@@ -51,5 +51,10 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should contain a value that was added at the head', function() {
+    linkedList.addToHead(10000);
+    expect(linkedList.contains(10000)).to.equal(true);
+  });
+
   // add more tests here to test the functionality of linkedList
 });
