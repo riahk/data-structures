@@ -56,5 +56,14 @@ describe('linkedList', function() {
     expect(linkedList.contains(10000)).to.equal(true);
   });
 
+  it('should remove a value at the tail', function() {
+    linkedList.addToHead(3);
+    linkedList.addToHead(4);
+    linkedList.addToHead(5);
+
+    expect(linkedList.removeTail()).to.equal(3);
+    expect(linkedList.contains(3)).to.equal(false);
+  });
+
   // add more tests here to test the functionality of linkedList
 });
